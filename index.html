@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="sla.py"></script>
+    <title>Exibir Hora</title>
+    <script>
+        function mostrarHora() {
+            // Obtém a data e a hora atuais
+            const agora = new Date();
+            const hora = agora.toTimeString().split(' ')[0]; // Formata para HH:MM:SS
+            
+            // Exibe a hora no elemento HTML
+            document.getElementById('resultado').textContent = `Hora atual: ${hora}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Exibir Hora Atual</h1>
+    <button onclick="mostrarHora()">Clique para ver a hora</button>
+    <p id="resultado"></p>
+</body>
+</html>
